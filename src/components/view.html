@@ -9,13 +9,19 @@
 </head>
     <body>
         <header class="header__container">
-            <div id="header__container__qr">
-                <img id="qr-code" src="../assets/qr-code.png">
-            </div>
+            <a href="./index.html">
+                <span id="back">
+                    <img id="header__container__back" src="../assets/back-button.png" alt="back">
+                </span>
+            </a>
         </header>
         <main class="main__container">
-            <button class="main__container__start">Start</button>
-
+            <div id="qr_code">
+                <img class="main__container__qr" src="../assets/qr-code.png" alt="qr-code" />
+            </div>
+            <div class="main__container__buttons">
+                <button class="main__container__start" onclick="window.location.href = './server.html'"><a href="./server.html">Start</a></button>
+            </div>
         </main>
     </body>
 </html>

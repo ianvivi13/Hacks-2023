@@ -2,6 +2,7 @@
 <script type="text/javascript" src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
 <script type="text/javascript"></script>
 
+
 var loadFileOne = function(event) {
    var image = document.getElementById('img-one');
    image.src = URL.createObjectURL(event.target.files[0]);
@@ -25,7 +26,35 @@ var loadFileFour = function(event) {
 function updateProblemText() {
     document.getElementById("problem-text").innerHTML = document.getElementById("problem-text-box").value;
 }
-$('#capture-screenshot').click(function() {
+
+$('#submit-button').click(function() {
+    const screenshotTarget = document.getElementById("trolley-img");
+    html2canvas(screenshotTarget).then(canvas => {
+        document.getElementById("trolley-img").appendChild(canvas);
+        dataURL = canvas.toDataURL();
+    });
+});
+
+/*
+const captureScreenshot = async () => {
+    const canvas = document.createElement("canvas");
+    const context = canvas.getContext("2d");
+    const screenshot = document.createElement("screenshot");
+
+    try {
+        const captureStream = await navigator.mediaDevices.getDisplayMedia();
+        screenshot.srcObject = captureStream;
+        context.drawImage(screenshot, 0, 0, window.width, window.height);
+        const frame = canvas.toDataURL("image/png");
+        captureStream.getTracks().forEach(track => track.stop());
+        window.location.href = frame;
+    } catch (err) {
+        console.error("Error: " + err);
+    }
+};*/
+
+/*
+$('#trolley-img').click(function()  {
     const screenshotTarget = document.getElementById("trolley-img");
     html2canvas(screenshotTarget).then(canvas => {
     // to image as png use below line
@@ -57,4 +86,4 @@ $('#capture-screenshot').click(function() {
             console.log('Screenshot pushed to server.');
         }
     });
-}
+}*/
