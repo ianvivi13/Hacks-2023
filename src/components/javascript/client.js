@@ -1,3 +1,15 @@
+const ws = new WebSocket('ws://localhost:3000')
+ws.onopen = () => {
+    console.log('ws opened on browser')
+}
+
+ws.onmessage = (message) => {
+    if(message.data == 2) {
+        next = true;
+    }
+}
+
+var next = false;
 var pressedButton = false;
 
 setInterval(function(){
@@ -7,19 +19,25 @@ setInterval(function(){
 function waitForAdmin() {
     // (if start has not been pressed in view) || (if next has not been pressed yet && user has incremented a value), hide buttons
     // NOT FINISHED
-    hideButtons();
-    showButtons();
-    pressedButton = false;
-}
-
-function incNoLever() {
-    // increment no lever variable in host
-    hideButtons();
-    pressedButton = true;
+    if(next) {
+        showButtons();
+        next = false;
+        pressedButton = false
+    } if(pressedButton) {
+        hideButtons();
+    }
 }
 
 function incLever() {
     // increment lever variable in host
+    ws.send('1');
+    hideButtons();
+    pressedButton = true;
+}
+
+function incNoLever() {
+    // increment no lever variable in host
+    ws.send('0');
     hideButtons();
     pressedButton = true;
 }
