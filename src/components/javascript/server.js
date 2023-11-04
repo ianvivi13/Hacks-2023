@@ -1,36 +1,38 @@
-var count = 0;
+const ws = new WebSocket('ws://localhost:3000')
+ws.onopen = () => {
+    console.log('ws opened on browser')
+}
 
-var http = require('http');
-var util = require('util')
-http.createServer(function (req, res) {
-    if (req.method === 'POST') {
-        console.log("POST");
-        var body = '';
-        req.on('data', function (data) {
-            body += data;
-            document.getElementById("no-lever").innerHTML = data;
-            console.log("Partial body: " + body);
-        });
-        req.on('end', function () {
-            console.log("Body: " + body);
-        });
-        res.writeHead(200, {'Content-Type': 'text/html'});
-        res.end('callback(\'{\"msg\": \"OK\"}\')');
+ws.onmessage = (message) => {
+    if(message.data == 0) {
+        incNoLeverCount();
+    } else if(message.data == 1) {
+        incLeverCount();
     }
-    else
-    {
-        console.log("GET");
-        res.writeHead(200, {'Content-Type': 'text/html'});
-        res.end('callback(\'{\"msg\": \"OK\"}\')');
-    }
-}).listen(8090);
-console.log('Server running on port 8090');
+}
+
+var count = 0;
+var leverCount = 0;
+var noLeverCount = 0;
 
 function changeImg() {
     count++;
     document.getElementById("problem").src = "../assets/created-problems/trolley-problem-" + count + ".jpg";
     document.getElementById("no-lever").innerHTML = "0";
     document.getElementById("lever").innerHTML = "0";
+    leverCount = 0;
+    noLeverCount = 0;
+    ws.send("2");
+}
+
+function incLeverCount() {
+    leverCount++;
+    document.getElementById("lever").innerHTML = leverCount.toString();
+}
+
+function incNoLeverCount() {
+    noLeverCount++;
+    document.getElementById("no-lever").innerHTML = noLeverCount.toString();
 }
 
 function endSession() {
