@@ -1,27 +1,130 @@
-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
+@font-face {
+    font-family: 'Gagabin';
+    src: url("../../../src/assets/font/Gagalin-Regular.ttf") format('truetype');
+}
+
+:root {
+    --primary-color: #8ECAE6;
+    --primary-color-transparent: rgba(142, 202, 230, 0.8);
+    --secondary-color: #023047;
+    --tertiary-color: #ffffff;
+    --quaternary-color: #fff;
+}
+
+*,
+*::after,
+*::before {
     margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    outline: 0;
 }
 
-.header__container {
-    text-align: center;
+html,
+body {
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
-.header__container__head {
-    font-size: 24px;
-    /* Add any additional styles you want for the QR code here */
+body {
+    background-image: url('../../assets/background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+/* CSS for styling the layout */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+#back {
+    display: flex;
+    height: 6rem; /* Adjust the height as needed */
+    width: 6rem; /* Adjust the width as needed */
+    margin: 2rem; /* Adjust the margin for spacing */
+    background-color: var(--primary-color-transparent);
+    border-radius: 50%; /* Make the background circular */
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border: none;
+}
+
+#back a {
+
+}
+
+#header__container__back {
+    position: relative;
+    height:3.5rem;
+    width: auto;
+    cursor: pointer;
+}
+
+#qr_code {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+
 }
 
 .main__container {
+    padding: 0;
+    margin-top: -5rem;
     text-align: center;
 }
 
-.main__container__start {
-    font-size: 36px;
-    font-weight: bold;
-    padding: 10px 20px;
+.main__container__qr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 30%;
+    width: 30%;
+    border: 6px solid var(--secondary-color);
+}
+
+.main__container__buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    padding-top: 2rem;
+}
+
+
+.main__container button {
+    height: 30%;
+    width: 15%;
+    padding: 25px 20px;
+    margin: 2rem 1rem;
+    font-size: 2rem;
+    font-weight: unset;
+    font-family: 'Gagabin', serif;
+
+    cursor: pointer;
+
+    background-color: var(--primary-color);
+    border: 3px solid var(--secondary-color);
+    border-radius: 20px;
+    transition: background-color 0.3s;
+}
+
+.main__container button a {
+    text-decoration: none;
+    color: var(--tertiary-color);
+    border-color: var(--secondary-color);
+}
+
+.main__container button:hover {
+    background-color: #2980b9;
 }
