@@ -5,14 +5,11 @@
     <title>Infinite Trolley Problems</title>
     <link rel="stylesheet" href="./style/view.css" />
     <link rel="icon" type="image/x-icon" href="../assets/InfiniteTrolley.ico" />
-    <script src="./javascript/index.js" defer></script>
+    <script src="./javascript/qrCode.js" ></script>
 </head>
     <body>
         <header class="header__container">
-            <h1 class="header__container__head">
-                Happy Testing! QR Code will be here!
-                <!--Insert QR Code Here-->
-            </h1>
+            <div id="header__container__qr" onload="qrcode()"></div>
         </header>
         <main class="main__container">
             <button class="main__container__start">Start</button>
@@ -20,4 +17,6 @@
         </main>
     </body>
 </html>
+
+
 
