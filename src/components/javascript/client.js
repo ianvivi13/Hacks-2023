@@ -1,3 +1,5 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 var pressedButton = false;
 
 setInterval(function(){
@@ -14,6 +16,14 @@ function waitForAdmin() {
 
 function incNoLever() {
     // increment no lever variable in host
+    $(document).ready(function() {
+        $.ajax({
+            url: 'https://ianvivi13.github.io/Hacks-2023/src/components/server.html:8090/',
+            data:   1,
+            type: 'POST',
+            jsonpCallback: 'callback'
+        });
+    });
     hideButtons();
     pressedButton = true;
 }
