@@ -1,0 +1,77 @@
+:root {
+    --color-primary: #0a5599;
+    --color-white: #f0f0f0;
+    --color-black: rgb(31 31 31);
+    --color-grey: #777777;
+    --color-grey-light: #999999;
+    --color-grey-dark: #555555;
+    --color-green: #85bb65;
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    outline: 0;
+}
+
+html,
+body {
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+
+}
+
+body {
+    box-sizing: border-box;
+    font-family: font-primary-regular, serif;
+    color: var(--color-black);
+    background-color: var(--color-white);
+    overflow: hidden;
+}
+
+/* CSS for styling the layout */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.header__container {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.main__container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.main__container button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 16px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.main__container button:hover {
+    background-color: #2980b9;
+}
