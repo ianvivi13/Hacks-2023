@@ -4,14 +4,17 @@
         <meta charset="UTF-8">
         <title>Create a Problem</title>
         <script src="javascript/create.js"></script>
+
     </head>
     <body onload="updateProblemText()">
-        <img src="../assets/base-image.png">
+    <div id="trolley-img">
+        <img id="base-img" src="../assets/base-image.png">
         <img id="img-one">
         <img id="img-two">
         <img id="img-three">
         <img id="img-four">
         <p id="problem-text"></p>
+    </div>
         <input id="img-one-upload" type="file" onchange="loadFileOne(event)"/>
         <input id="img-two-upload" type="file" onchange="loadFileTwo(event)"/>
         <input id="img-three-upload" type="file" onchange="loadFileThree(event)"/>
