@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Create a Problem</title>
+        <script src="create.js"></script>
+    </head>
+    <body onload="updateProblemText()">
+        <img src="base-image.png">
+        <img id="img-one">
+        <img id="img-two">
+        <img id="img-three">
+        <img id="img-four">
+        <p id="problem-text"></p>
+        <input id="img-one-upload" type="file" onchange="loadFileOne(event)"/>
+        <input id="img-two-upload" type="file" onchange="loadFileTwo(event)"/>
+        <input id="img-three-upload" type="file" onchange="loadFileThree(event)"/>
+        <input id="img-four-upload" type="file" onchange="loadFileFour(event)"/>
+        <textarea id="problem-text-box" onkeyup="updateProblemText()">You find yourself at a lever. A runaway trolley approaches five people who are tied to a set of tracks. Pulling the lever will divert the trolley to a different set of tracks, where only one person is tied down. Do you pull the lever?</textarea>
+    </body>
+</html>
