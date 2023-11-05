@@ -1,5 +1,5 @@
-const ws = new WebSocket('ws://localhost:3000')
-ws.onopen = () => {
+const ws = new WebSocket('wss://10.64.136.48:3000')
+/*ws.onopen = () => {
     console.log('ws opened on browser')
 }
 
@@ -7,7 +7,7 @@ ws.onmessage = (message) => {
     if(message.data == 2) {
         next = true;
     }
-}
+}*/
 
 var next = false;
 var pressedButton = false;
