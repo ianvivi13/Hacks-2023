@@ -7,8 +7,8 @@
     --primary-color: #8ECAE6;
     --secondary-color: #023047;
     --tertiary-color: #ffffff;
-    --quaternary-color: #fff;
-    --quinary-color: #000;
+    --quaternary-color: #FFB703;
+    --quinary-color: #864D0D;
     --senary-color: #fff;
     --septenary-color: #000;
 }
@@ -55,9 +55,8 @@ body {
 }
 
 #header__container {
-
     width: 40%;
-    height: 100%;
+    height: 40%;
     margin: 0 auto;
     padding: 20px;
     border-radius: 5px;
@@ -65,7 +64,7 @@ body {
 
 .header__container__head {
     font-family: 'Gagabin', serif;
-    font-size: 5rem;
+    font-size: 4.0rem;
     margin-top: 1rem;
     font-weight: bold;
     justify-content: center;
@@ -83,7 +82,7 @@ body {
 }
 
 #header__waiting {
-    padding-top: 6rem;
+    padding-top: 8rem;
 }
 /* CSS for styling the layout */
 
@@ -98,14 +97,63 @@ body {
     width: 0;
 }
 
+#main__container__buttons {
+    font-family: 'Gagabin', serif;
+    font-size: 6rem;
+    margin-top: -9rem;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    text-align: center; /* Center the text horizontally */
+    line-height: 1.3; /* Center the text vertically within the header */
+    flex-direction: column;
+    height: 45%;
+}
+
+#main__container__buttons button {
+    height: 65%;
+    width: 20%;
+    padding: 30px 20px;
+    margin: 25px 10px;
+    font-size: 3rem;
+    font-weight: unset;
+    font-family: 'Gagabin', serif;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+}
+
+#no-lever-button {
+    background-color: var(--primary-color);
+    border: 3px solid var(--secondary-color);
+    color: var(--tertiary-color);
+    text-shadow: 4px 0 var(--secondary-color), -4px 0 var(--secondary-color),
+    0 4px var(--secondary-color), 0 -4px var(--secondary-color),
+    2px 2px var(--secondary-color), -2px -2px var(--secondary-color),
+    2px -2px var(--secondary-color), -2px 2px var(--secondary-color);
+
+}
+
+#lever-button {
+    background-color: var(--quaternary-color);
+    border: 3px solid var(--quinary-color);
+    color: var(--tertiary-color);
+    text-shadow: 4px 0 var(--quinary-color), -4px 0 var(--quinary-color),
+    0 4px var(--quinary-color), 0 -4px var(--quinary-color),
+    2px 2px var(--quinary-color), -2px -2px var(--quinary-color),
+    2px -2px var(--quinary-color), -2px 2px var(--quinary-color);
+
+}
+
 @keyframes ellipsis {
     to {
-        width: 6rem;
+        width: 4.5rem;
     }
 }
 
 @-webkit-keyframes ellipsis {
     to {
-        width: 6rem;
+        width: 4.5rem;
     }
 }
