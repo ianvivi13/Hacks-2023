@@ -1,4 +1,4 @@
-const ws = new WebSocket('wss://localhost:3000');
+const ws = new WebSocket('ws://localhost:3000');
 ws.onopen = () => {
     console.log('ws opened on browser')
 }
@@ -17,7 +17,7 @@ var noLeverCount = 0;
 
 function changeImg() {
     count++;
-    //document.getElementById("problem").src = "../assets/created-problems/trolley-problem-" + count + ".jpg";
+    document.getElementById("problem").src = "../assets/created-problems/trolley-problem-" + count + ".png";
     document.getElementById("no-lever").innerHTML = "0";
     document.getElementById("lever").innerHTML = "0";
     leverCount = 0;

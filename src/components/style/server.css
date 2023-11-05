@@ -1,7 +1,7 @@
 /* Define a custom font 'Gagabin' */
 @font-face {
     font-family: 'Gagabin';
-    src: url("../../../src/assets/font/Gagalin-Regular.ttf") format('truetype');
+    src: url("../assets/font/Gagalin-Regular.ttf") format('truetype');
 }
 
 /* Define custom color variables */
@@ -33,11 +33,11 @@ html, body {
 
 /* Style the background of the body with an image */
 body {
-    background-image: url('../../assets/QR_Code_Backdrop.png');
+    background-image: url('../assets/QR_Code_Backdrop.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    overflow: hidden;
+    overflow: auto;
 }
 
 /* Style a container element */
@@ -60,8 +60,8 @@ body {
 
 /* Style images inside the header container */
 #header__container img {
-    height: auto;
-    width: 50%;
+    height: 40%;
+    width: 40%;
     border: 3px solid black;
 }
 

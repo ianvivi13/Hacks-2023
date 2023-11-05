@@ -1,5 +1,5 @@
-const ws = new WebSocket('wss://10.64.136.48:3000')
-/*ws.onopen = () => {
+const ws = new WebSocket('ws://10.64.136.48:3000')
+ws.onopen = () => {
     console.log('ws opened on browser')
 }
 
@@ -7,7 +7,7 @@ ws.onmessage = (message) => {
     if(message.data == 2) {
         next = true;
     }
-}*/
+}
 
 var next = false;
 var pressedButton = false;
@@ -17,26 +17,26 @@ setInterval(function(){
 }, 500);
 
 function waitForAdmin() {
-    // (if start has not been pressed in view) || (if next has not been pressed yet && user has incremented a value), hide buttons
-    // NOT FINISHED
     if(next) {
         showButtons();
+        document.getElementById("header__waiting").style.visibility = 'hidden';
+        document.getElementById("header__victim").style.visibility = 'hidden';
         next = false;
         pressedButton = false
     } if(pressedButton) {
         hideButtons();
+        document.getElementById("header__waiting").style.visibility = 'visible';
+        document.getElementById("header__victim").style.visibility = 'visible';
     }
 }
 
 function incLever() {
-    // increment lever variable in host
     ws.send('1');
     hideButtons();
     pressedButton = true;
 }
 
 function incNoLever() {
-    // increment no lever variable in host
     ws.send('0');
     hideButtons();
     pressedButton = true;
