@@ -3,14 +3,32 @@
     <head>
         <meta charset="UTF-8">
         <title>Host</title>
+        <link rel="stylesheet" href="./style/server.css" />
         <link rel="icon" type="image/x-icon" href="../assets/favicon.ico" />
         <script src="javascript/server.js"></script>
     </head>
     <body onload="changeImg()">
-        <img id="problem" src="">
-        <span id="no-lever">0</span>
-        <span id="lever">0</span>
-        <button id="next-button" onclick="changeImg()">Next</button>
-        <button id="end-button" onclick="endSession()">End Session</button>
+        <header id="header__container">
+            <img id="problem" src="../../src/assets/base-image.png" alt="">
+        </header>
+        <main>
+            <div id="header__container__head" class="container__count">
+                <div id="no-pulled-lever">
+                    <span id="no-lever-header">Lever Pulled</span>
+                    <span id="no-lever">0</span>
+                </div>
+                <div id="space">
+
+                </div>
+                <div id="pulled-lever">
+                    <span id="lever-header">Not Pulled</span>
+                    <span id="lever">0</span>
+                </div>
+            </div>
+            <div class="main__container__buttons">
+                <button id="end-button" onclick="endSession()">End Session</button>
+                <button id="next-button" onclick="changeImg()">Next</button>
+            </div>
+        </main>
     </body>
 </html>
