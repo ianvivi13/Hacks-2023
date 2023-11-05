@@ -1,0 +1,191 @@
+/* Define a custom font 'Gagabin' */
+@font-face {
+    font-family: 'Gagabin';
+    src: url("../../../src/assets/font/Gagalin-Regular.ttf") format('truetype');
+}
+
+/* Define custom color variables */
+:root {
+    --primary-color: #8ECAE6;
+    --secondary-color: #023047;
+    --tertiary-color: #ffffff;
+    --quaternary-color: #FFB703;
+    --quinary-color: #864D0D;
+    --senary-color: #fff;
+    --septenary-color: #000;
+}
+
+/* Reset styles for all elements */
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    outline: 0;
+}
+
+/* Apply styles to HTML and body elements */
+html, body {
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the background of the body with an image */
+body {
+    background-image: url('../../assets/QR_Code_Backdrop.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+/* Style a container element */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+/* Style the header container */
+#header__container {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Style images inside the header container */
+#header__container img {
+    height: auto;
+    width: 50%;
+    border: 3px solid black;
+}
+
+/* Style the header text container */
+#header__container__head {
+    font-family: 'Gagabin', serif;
+    font-size: 5.0rem;
+    margin-top: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    color: var(--septenary-color);
+    font-weight: bold;
+}
+
+/* Style the "Not Pulled" and "Pulled" text containers */
+#no-pulled-lever, #pulled-lever {
+    font-family: 'Gagabin', serif;
+    margin-top: 0rem;
+    font-weight: normal;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    line-height: 0.8;
+    flex-direction: column;
+    height: 45%;
+}
+
+/* Style the count container */
+.container__count {
+    font-family: 'Batangas', serif;
+    font-size: 6rem;
+    font-weight: normal;
+}
+
+/* Style the "Pulled" count text */
+#no-lever {
+    margin-right: 4rem;
+    margin-top: 1rem;
+    color: var(--secondary-color);
+    text-shadow: 1px 0 var(--secondary-color), -2px 0 var(--secondary-color),
+    0 2px var(--secondary-color), 0 -2px var(--secondary-color),
+    1px 1px var(--secondary-color), -1px -1px var(--secondary-color),
+    1px -1px var(--secondary-color), -1px 1px var(--secondary-color);
+}
+
+/* Style the "Not Pulled" count text */
+#lever {
+    margin-top: 1rem;
+    color: var(--quinary-color);
+    text-shadow: 2px 0 var(--quinary-color), -2px 0 var(--quinary-color),
+    0 2px var(--quinary-color), 0 -2px var(--quinary-color),
+    1px 1px var(--quinary-color), -1px -1px var(--quinary-color),
+    1px -1px var(--quinary-color), -1px 1px var(--quinary-color);
+}
+
+/* Style the main button container */
+.main__container__buttons {
+    font-family: 'Batangas', serif;
+    font-size: 5rem;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    height: 45%;
+}
+
+/* Style buttons */
+.main__container__buttons button {
+    padding: 2rem 1rem;
+    margin: 25px 10px;
+    font-size: 3rem;
+    font-weight: unset;
+    font-family: 'Gagabin', serif;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+}
+
+/* Style the "End Session" button */
+#end-button {
+    margin-right: 20rem;
+    background-color: var(--primary-color);
+    border: 3px solid var(--secondary-color);
+    color: var(--tertiary-color);
+    text-shadow: 2px 0 var(--secondary-color), -2px 0 var(--secondary-color),
+    0 2px var(--secondary-color), 0 -2px var(--secondary-color),
+    1px 1px var(--secondary-color), -1px -1px var(--secondary-color),
+    1px -1px var(--secondary-color), -1px 1px var(--secondary-color);
+}
+
+/* Style the "Next" button */
+#next-button {
+    padding: 2rem 5.4rem;
+    background-color: var(--quaternary-color);
+    border: 3px solid var(--quinary-color);
+    color: var(--tertiary-color);
+    text-shadow: 2px 0 var(--quinary-color), -2px 0 var(--quinary-color),
+    0 2px var(--quinary-color), 0 -2px var(--quinary-color),
+    1px 1px var(--quinary-color), -1px -1px var(--quinary-color),
+    1px -1px var(--quinary-color), -1px 1px var(--quinary-color);
+}
+
+/* Adjust padding and alignment for various elements */
+#no-pulled-lever, #pulled-lever {
+
+    padding-top: 3rem;
+    justify-content: space-between;
+    align-content: space-between;
+    align-items: center;
+}
+
+
+
+#end-button, #next-button {
+    margin-top: 3rem;
+    justify-content: space-between;
+    align-content: space-between;
+    align-items: center;
+}
+
+#space {
+    width:8%;
+}
