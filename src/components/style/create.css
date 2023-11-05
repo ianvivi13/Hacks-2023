@@ -1,0 +1,171 @@
+/* Define a custom font 'Gagabin' */
+@font-face {
+    font-family: 'Gagabin';
+    src: url("../../../src/assets/font/Gagalin-Regular.ttf") format('truetype');
+}
+
+/* Define custom color variables */
+:root {
+    --primary-color: #8ECAE6;
+    --secondary-color: #023047;
+    --tertiary-color: #ffffff;
+    --quaternary-color: #FFB703;
+    --quinary-color: #864D0D;
+    --senary-color: #fff;
+    --septenary-color: #000;
+}
+
+/* Reset styles for all elements */
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    outline: 0;
+}
+
+/* Apply styles to HTML and body elements */
+html, body {
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+#problem-text {
+    font-family: 'Gagabin', serif;
+    padding-top: 3rem;
+    font-size: 2rem;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    text-align: center; /* Center the text horizontally */
+    line-height: 1.2; /* Center the text vertically within the header */
+}
+
+#problem-text-box {
+    width: 90%;
+
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin: 0 auto;
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+    border-radius: 5px;
+
+    font-family: 'Gagabin', serif;
+    font-size: 2rem;
+    font-weight: bold;
+    resize: none;
+
+
+}
+
+#problem-text-box input {
+    width: 90%;
+    height: 60%;
+}
+
+#header__container {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Style images inside the header container */
+#header__container img {
+    height: auto;
+    width: 35%;
+}
+
+#header__container img:not(:first-child) {
+    position: absolute;
+}
+
+
+
+#caption {
+    font-family: 'Gagabin';
+    font-size: 4rem;
+    font-weight: bold;
+    color: var(--septenary-color);
+    text-align: center;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+#caption__container {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 5px;
+
+    width: 100%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    resize: none;
+}
+
+#grid {
+    display: flex;
+    margin-left: -9rem;
+    font-family: 'Gagabin', serif;
+    padding-top: 2rem;
+    font-size: 2rem;
+    font-weight: normal;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Center the text horizontally */
+}
+
+#grid input[type="file"] {
+    visibility: hidden;
+}
+
+#submit-button {
+    font-family: 'Gagabin', serif;
+    font-size: 2rem;
+    font-weight: normal;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Center the text horizontally */
+    line-height: 1.2; /* Center the text vertically within the header */
+    padding: 2rem 3rem;
+    border-radius: 14px;
+    background-color: var(--quaternary-color);
+    color: var(--tertiary-color);
+    border: 3px solid var(--quinary-color);
+    cursor: pointer;
+    display: flex;
+    margin: 0 auto;
+    margin-top: 3rem;
+    transition: background-color 0.3s;
+}
+
+#submit-button a {
+    text-decoration: none;
+    color: var(--tertiary-color);
+}
+
+#submit-button:hover {
+    background-color: var(--quinary-color);
+}

@@ -1,6 +1,3 @@
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script type="text/javascript" src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
-<script type="text/javascript"></script>
 
 
 var loadFileOne = function(event) {
@@ -25,6 +22,7 @@ var loadFileFour = function(event) {
 
 function updateProblemText() {
     document.getElementById("problem-text").innerHTML = document.getElementById("problem-text-box").value;
+    console.log(document.getElementById("problem-text-box").value)
 }
 
 $('#submit-button').click(function() {
@@ -35,55 +33,6 @@ $('#submit-button').click(function() {
     });
 });
 
-/*
-const captureScreenshot = async () => {
-    const canvas = document.createElement("canvas");
-    const context = canvas.getContext("2d");
-    const screenshot = document.createElement("screenshot");
 
-    try {
-        const captureStream = await navigator.mediaDevices.getDisplayMedia();
-        screenshot.srcObject = captureStream;
-        context.drawImage(screenshot, 0, 0, window.width, window.height);
-        const frame = canvas.toDataURL("image/png");
-        captureStream.getTracks().forEach(track => track.stop());
-        window.location.href = frame;
-    } catch (err) {
-        console.error("Error: " + err);
-    }
-};*/
 
-/*
-$('#trolley-img').click(function()  {
-    const screenshotTarget = document.getElementById("trolley-img");
-    html2canvas(screenshotTarget).then(canvas => {
-    // to image as png use below line
-    // const base64image = canvas.toDataURL("image/png");
-    // show the image in window use below line
-    // window.location.href = base64image;
-
-    // screenshot appended to the body as canvas
-    document.body.appendChild(canvas);
-    let dataURL = canvas.toDataURL();
-    // to print the screenshot in console use below line
-    // console.log(dataURL);
-
-    // following line is optional and it is to save the screenshot
-    // on the server side. It initiates an ajax call
-    pushScreenshotToServer(dataURL);
-    });
-});
-
-    function pushScreenshotToServer(dataURL) {
-    $.ajax({
-        url: "push-screenshot.php",
-        type: "POST",
-        data: {
-            image: dataURL
-        },
-        dataType: "html",
-        success: function() {
-            console.log('Screenshot pushed to server.');
-        }
-    });
-}*/
+console.log(document.getElementById("problem-text-box").value)
