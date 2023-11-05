@@ -5,5 +5,5 @@ ws.onopen = () => {
 
 function startSession() {
     ws.send("2");
-    window.location.href = "../components/server.html";
+    window.location.href = "../server.html";
 }

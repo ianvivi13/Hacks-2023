@@ -1,7 +1,7 @@
 /* Define a custom font 'Gagabin' */
 @font-face {
     font-family: 'Gagabin';
-    src: url("../../../src/assets/font/Gagalin-Regular.ttf") format('truetype');
+    src: url("../assets/font/Gagalin-Regular.ttf") format('truetype');
 }
 
 /* Define custom color variables */
