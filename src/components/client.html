@@ -3,9 +3,16 @@
     <head>
         <meta charset="UTF-8">
         <title>User</title>
-        <link rel="icon" type="image/x-icon" href="../assets/favicon.ico" />
+        <link rel="stylesheet" href="./style/client.css"/>
+        <link rel="icon" type="image/x-icon" href="../assets/favicon.ico"/>
         <script src="./javascript/client.js"></script>
     </head>
+    <header id="header__container">
+        <div id="header__text">
+        <h1 class="header__container__head" id="header__waiting">Waiting</h1>
+        <h1 class="header__container__head" id="header__victim" >for Victims<span class="loading"></span></h1>
+        </div>
+    </header>
     <body onload="waitForAdmin()">
         <button id="no-lever-button" onclick="incNoLever()">Don't pull the lever</button>
         <button id="lever-button" onclick="incLever()">Pull the lever</button>
