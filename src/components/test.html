@@ -2,13 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=1000, initial-scale=1.0">
     <title>Testing Title</title>
-    <script src="./javascript/test.js"></script>
 </head>
 <body>
-    <div id="test">
-        <div id="root">TESTING TESTING READ ALL ABOUT IT</div>
-    </div>
-    <button id="test-button">Test</button>
+Client 1
+    <button>Test</button>
 </body>
+<script>
+
+    const ws = new WebSocket('ws://localhost:8082');
+
+    ws.addEventListener("open", () => {
+        console.log("We are connected!");
+
+        ws.send("Hello from client 1");
+    });
+
+</script>
 </html>

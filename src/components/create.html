@@ -3,24 +3,38 @@
     <head>
         <meta charset="UTF-8">
         <title>Create a Problem</title>
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <link rel="stylesheet" href="./style/create.css" />
+        <link rel="icon" type="image/x-icon" href="../assets/favicon.ico" />
         <script src="./javascript/create.js"></script>
 
     </head>
     <body onload="updateProblemText()">
-    <div id="trolley-img">
-        <img id="base-img" src="./assets/base-image.png">
-        <img id="img-one">
-        <img id="img-two">
-        <img id="img-three">
-        <img id="img-four">
-        <p id="problem-text"></p>
-    </div>
-        <input id="img-one-upload" type="file" onchange="loadFileOne(event)"/>
-        <input id="img-two-upload" type="file" onchange="loadFileTwo(event)"/>
-        <input id="img-three-upload" type="file" onchange="loadFileThree(event)"/>
-        <input id="img-four-upload" type="file" onchange="loadFileFour(event)"/>
-        <textarea id="problem-text-box" onkeyup="updateProblemText()">You find yourself at a lever. A runaway trolley approaches five people who are tied to a set of tracks. Pulling the lever will divert the trolley to a different set of tracks, where only one person is tied down. Do you pull the lever?</textarea>
-        <button id="submit-button" onclick="submit()">Submit</button>
+    <nav>
+
+    </nav>
+        <header id="header__container">
+            <img id="problem" src="../../src/assets/base-image.png" alt="">
+
+
+        </header>
+        <main>
+            <p id="problem-text">"Enter Trolley Problem Here!"</p>
+            <label for="problem-text-box"></label><textarea id="problem-text-box" onkeyup="updateProblemText()">You find yourself at a lever. A runaway trolley approaches five people who are tied to a set of tracks. Pulling the lever will divert the trolley to a different set of tracks, where only one person is tied down. Do you pull the lever?</textarea>
+            <div>
+
+            </div>
+            <div id="grid">
+                <input id="img-one-upload" type="file" title="Edit Trolley" onchange="loadFileOne(event)"/>
+                <label for="img-one-upload">Edit Trolley</label>
+                <input id="img-two-upload" type="file" onchange="loadFileTwo(event)"/>
+                <label for="img-two-upload">Edit Person</label>
+                <input id="img-three-upload" type="file" onchange="loadFileThree(event)"/>
+                <label for="img-three-upload">Edit Upper Track</label>
+                <input id="img-four-upload" type="file" onchange="loadFileFour(event)"/>
+                <label for="img-four-upload">Edit Lower Track</label>
+            </div>
+
+            <button id="submit-button" onclick=" window.location.href = './index.html'; submit();"><a href="./index.html">Submit Here</a></button>
+        </main>
     </body>
 </html>
